@@ -1,0 +1,35 @@
+
+<div class="registeration-container">
+
+  <nav class="nav-container">
+    <div class="nav">
+      <img class="back-icon" src="" alt="">
+      <%# <i class="back-icon fa fa-trash-o"></i> %>
+      <h1 class="register text-font thin">LOGIN</h1>
+      <%# <%= link_to 'LOG IN', user_session_path %>
+
+        <button type="submit" class="next text-font thin" form="new_user">Log In</button>
+   
+    </div>
+  </nav>
+
+  <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    <div class="field">
+      <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Email", class: 'input' %>
+    </div>
+
+    <div class="field">
+      <%= f.password_field :password, autocomplete: "current-password", placeholder: "Email", class: 'input' %>
+    </div>
+
+    <% if devise_mapping.rememberable? %>
+      <div class="field">
+        <%= f.check_box :remember_me %>
+        <%= f.label :remember_me %>
+      </div>
+    <% end %>
+  <% end %>
+
+</div>
+
+<%= render "devise/shared/links" %>

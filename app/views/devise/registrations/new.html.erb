@@ -1,0 +1,36 @@
+<%# <h2>Sign up</h2> %>
+<div class="registeration-container">
+
+  <nav class="nav-container">
+    <div class="nav">
+      <img class="back-icon" src="" alt="">
+      <%# <i class="back-icon fa fa-trash-o"></i> %>
+      <h1 class="register text-font thin">REGISTER</h1>
+      <button type="submit" class="next text-font thin" form="new_user">Next</button>
+    </div>
+  </nav>
+
+  <%= form_for(resource, as: resource_name, url: registration_path(resource_name), class: "form") do |f| %>
+    <%= render "devise/shared/error_messages", resource: resource %>
+
+    <div class="field">
+      <%= f.text_field :name, autofocus: true, placeholder: 'Full Name', class: 'form-control input' %>
+    </div>
+
+    <div class="field">
+      <%= f.email_field :email, autocomplete: "email", placeholder: 'Email', class: 'form-control input' %>
+    </div>
+
+    <div class="field">
+
+      <%= f.password_field :password, autocomplete: "new-password", placeholder: 'Password', class: 'form-control input' %>
+    </div>
+
+    <div class="field">
+      <%= f.password_field :password_confirmation, autocomplete: "new-password", placeholder: 'Confirm Password', class: 'form-control input' %>
+    </div>
+    
+  <% end %>
+</div>
+
+<%# <%= render "devise/shared/links" %>
