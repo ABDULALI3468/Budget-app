@@ -3,8 +3,9 @@
 
   <nav class="nav-container">
     <div class="nav">
-      <img class="back-icon" src="" alt="">
-      <%# <i class="back-icon fa fa-trash-o"></i> %>
+      <%= link_to get_started_path do %>
+        <i class="fa-light fa-backward back" style="font-family: FontAwesome;"></i>
+      <% end  %>
       <h1 class="register text-font thin">LOGIN</h1>
       <%# <%= link_to 'LOG IN', user_session_path %>
 

@@ -2,39 +2,38 @@ class GroupsController < ApplicationController
   before_action :authenticate_user!, except: [:index]
   before_action :set_client
 
+  # GET /groups or /groups.json
   def index
-    if current_user.nil?
+    if @client.nil?
       redirect_to get_started_path
       return
     end
     @groups = current_user.groups
   end
 
+  # GET /groups/new
   def new
     @group = Group.new
   end
 
+  # POST /groups or /groups.json
   def create
-    @user = current_user
     @group = Group.new(group_params)
-    @group.user = @user
-
-    respond_to do |format|
-      if @group.save
-        format.html { redirect_to groups_path, notice: 'Group was successfully created.' }
-        format.json { render :index, status: :created, location: @group }
-      else
-        format.html { render :new, status: :unprocessable_entity }
-        format.json { render json: @group.errors, status: :unprocessable_entity }
-      end
+    if !@group.valid?
+      flash.now[:notice] = 'Can\'t create group with missing info!'
+      render :new, status: :unprocessable_entity
+    elsif @group.save
+      flash[:notice] = 'Group was created successfully!'
+      redirect_to group_operations_path(@group.id), method: :get
+    else
+      flash.now[:notice] = 'Something went wrong :c'
+      render :new, status: :unprocessable_entity
     end
   end
 
   private
 
-  # Use callbacks to share common setup or constraints between actions.
   # Only allow a list of trusted parameters through.
-
   def group_params
     params.require(:group).permit(:name, :icon).merge(user_id: @client.id)
   end
