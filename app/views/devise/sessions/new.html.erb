@@ -8,8 +8,8 @@
       <h1 class="register text-font thin">LOGIN</h1>
       <%# <%= link_to 'LOG IN', user_session_path %>
 
-        <button type="submit" class="next text-font thin" form="new_user">Log In</button>
-   
+      <button type="submit" class="next text-font thin" form="new_user">Log In</button>
+
     </div>
   </nav>
 
@@ -19,7 +19,7 @@
     </div>
 
     <div class="field">
-      <%= f.password_field :password, autocomplete: "current-password", placeholder: "Email", class: 'input' %>
+      <%= f.password_field :password, autocomplete: "current-password", placeholder: "Password", class: 'input' %>
     </div>
 
     <% if devise_mapping.rememberable? %>
