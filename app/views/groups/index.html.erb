@@ -1,0 +1,33 @@
+<div class="groups-container">
+  <nav class="nav-container fixed">
+    <div class="nav transactions-nav">
+      <img class="ham-burger" src="" alt="">
+      <%# <i class="back-icon fa fa-trash-o"></i> %>
+      <h1 class="register text-font bold">TRANSACTIONS</h1>
+      <%= button_to 'LOG OUT', destroy_user_session_path, method: :delete %>
+    </div>
+  </nav>
+
+  <div class="groups">
+
+
+    <% @groups.each do |group| %>
+      <%= link_to group_operations_path(group.id) do %>
+        <div class="each-group">
+          <img class="group-image" src="<%= group.icon %>" alt="img logo">
+          <div class="info">
+            <h1 class="info-title text-font thin"><%= group.name %></h1>
+            <p class="info-date text-font thin">12 Apr 2022</p>
+          </div>
+          <p class="total-deposit text-font bold">$17.00</p>
+        </div>
+      <% end  %>
+    <% end  %>
+
+
+  <%= link_to new_group_path do %>
+    <div class="new">
+      <button class="new-button text-font thin">New</button>
+    </div>
+  <% end  %>
+</div>
