@@ -1,7 +1,9 @@
 <div class="groups-container">
   <nav class="nav-container fixed">
     <div class="nav transactions-nav">
-      <img class="ham-burger" src="" alt="">
+      <%= link_to groups_path do %>
+        <i class="fa-light fa-backward back" style="font-family: FontAwesome;"></i>
+      <% end  %>
       <h1 class="register text-font bold">Create a new Group</h1>
     </div>
   </nav>
@@ -14,6 +16,8 @@
     <div class="field">
       <%= f.text_field :icon,  placeholder: "Icon", class: 'input' %>
     </div>
+
+
 
     <button type="submit" class="save-group">Save</button>
 

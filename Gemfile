@@ -11,6 +11,8 @@ gem 'devise'
 
 # font-awesome gem for icons
 gem "font-awesome-rails"
+gem 'sassc-rails'
+gem 'sass-rails'
 
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
