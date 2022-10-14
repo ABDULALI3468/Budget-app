@@ -20,5 +20,4 @@ class User < ApplicationRecord
   def operations
     Operation.where(user_id: id).all
   end
-
 end

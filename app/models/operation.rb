@@ -11,5 +11,4 @@ class Operation < ApplicationRecord
   def group_id
     groups.first&.id
   end
-
 end
