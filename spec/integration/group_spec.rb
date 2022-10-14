@@ -58,6 +58,5 @@ RSpec.describe 'Groups', type: :feature do
       group = Group.last
       expect(page).to have_current_path(group_operations_path(group.id))
     end
-
   end
 end

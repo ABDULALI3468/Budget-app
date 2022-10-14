@@ -26,8 +26,8 @@ RSpec.describe 'Operations', type: :feature do
     end
 
     it 'shows the amount of each operation' do
-      expect(page).to have_content("#{@o1.amount}")
-      expect(page).to have_content("#{@o2.amount}")
+      expect(page).to have_content(@o1.amount.to_s)
+      expect(page).to have_content(@o2.amount.to_s)
     end
   end
 
