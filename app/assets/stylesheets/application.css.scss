@@ -71,6 +71,10 @@ hr {
   z-index: 100;
 }
 
+.checks > input {
+  width: unset !important;
+}
+
 a {
   -webkit-tap-highlight-color: transparent;
 }
