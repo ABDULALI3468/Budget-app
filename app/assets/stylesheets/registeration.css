@@ -1,0 +1,72 @@
+.registeration-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #f5f6f8;
+  height: 100%;
+}
+
+.nav-container {
+  position: relative;
+  background-color: var(--blue);
+  height: 100px;
+  width: 100%;
+  text-align: center;
+}
+
+.nav {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  height: 30px;
+}
+
+.back {
+  position: absolute;
+  left: 20px;
+  color: white;
+  font-size: 2rem;
+}
+
+.register {
+  color: white;
+  text-align: center;
+}
+
+.next {
+  position: absolute;
+  right: 25px;
+  bottom: 6px;
+  color: white;
+  margin-right: 15px;
+  background: none;
+  border: none;
+  font-size: 16px;
+}
+
+/* STYLING FORMS  */
+
+.new_user {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  height: auto;
+}
+
+.input {
+  display: block;
+  margin: 15px auto 15px auto;
+  border: none;
+  border-bottom: 1px solid rgba(172, 168, 171, 0.939);
+  padding: 10px;
+  width: 90%;
+}
+
+::placeholder {
+  color: grey;
+  font-family: proxima-nova, sans-serif;
+  font-style: normal;
+  font-weight: 300;
+}

@@ -1,0 +1,31 @@
+<div class="groups-container">
+  <nav class="nav-container fixed">
+    <div class="nav transactions-nav">
+      <i class="fa-light fa-backward back" style="font-family: FontAwesome;"></i>
+      <h1 class="register text-font bold">TRANSACTIONS</h1>
+    </div>
+  </nav>
+
+  <div class="groups">
+
+    <% @groups.each do |group| %>
+      <%= link_to group_operations_path(group.id) do %>
+        <div class="each-group">
+          <img class="group-image" src="<%= group.icon %>" alt="img logo">
+          <div class="info">
+            <h1 class="info-title text-font thin"><%= group.name %></h1>
+            <p class="info-date text-font thin">12 Apr 2022</p>
+          </div>
+          <p class="total-deposit deposit-position text-font bold">$<%= group.total %></p>
+        </div>
+      <% end  %>
+    <% end  %>
+
+  </div>
+
+  <%= link_to new_group_path do %>
+    <div class="new">
+      <button class="new-button text-font thin">New</button>
+    </div>
+  <% end  %>
+</div>

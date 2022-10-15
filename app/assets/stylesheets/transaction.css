@@ -1,0 +1,46 @@
+.total-transaction {
+  margin: 1rem;
+  margin-top: 2rem;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 0 10px 5px grey;
+}
+
+.each-transaction {
+  display: flex;
+  width: auto;
+  margin: 20px 15px 20px 15px;
+  border-radius: 5px;
+  background-color: white;
+  box-shadow: 0 0 13px 0 rgb(144, 143, 143);
+  flex-direction: column;
+  height: auto;
+}
+
+.image-title {
+  align-items: center;
+}
+
+.date {
+  margin: 1rem;
+  font-weight: 300;
+  align-items: center;
+}
+
+.deposit {
+  margin: 1rem;
+  align-items: center;
+}
+
+.w-auto {
+  width: auto;
+}
+
+.group-image {
+  width: 70px;
+  height: 70px;
+}
+
+.info-title {
+  margin-top: 0;
+}

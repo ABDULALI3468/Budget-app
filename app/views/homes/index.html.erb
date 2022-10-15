@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Recipes App</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= stylesheet_link_tag "home", "data-turbo-track": "reload" %>
+
+    <%= javascript_importmap_tags %>
+  </head>
+
+  <body>
+
+    <div class="home-page">
+      <h1 class="home-title">Snapscan</h1>
+      <div class="authentication">
+        <%= link_to 'LOG IN', user_session_path, class:"log-in" %>
+        <%= link_to 'SIGN UP', new_user_registration_path, class:"sign-up" %>
+      </div>
+    </div>
+
+  </body>
+</html>
