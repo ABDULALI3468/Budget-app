@@ -4,7 +4,7 @@
 
 > A classic budget app to keep track of your expenses by category, made with Rails, Turbo's Stimulus. It includes full user authentication and authorization. It also has fully tested functionality with unit tests and integration tests. Built within a week's work.
 
-> Check out the free [Heroku demo]()
+> Check out the free [Heroku demo](https://yours-budget-application.herokuapp.com/)
 
 ## Built With
 
